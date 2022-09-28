@@ -1,0 +1,39 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.2.json",
+    "height": 300,
+    "width": 400,
+    "data": {
+      "url": "https://raw.githubusercontent.com/RDeconomist/observatory/main/MV.DATA2_C1.csv"
+    },
+    "mark": {"type": "line", "color": "#e54753", "size": 2.4},
+    "encoding": {
+      "x": {
+        "field": "date",
+        "type": "nominal",
+        "title": null,
+        "axis": {"grid": false, "labelAngle": 35}
+      },
+      "y": {
+        "field": "value",
+        "type": "quantitative",
+        "scale": {"domain": [0, 38000]},
+        "title": null,
+        "axis": {
+          "grid": true,
+          "labelFontSize": 12,
+          "title": "£ per year (2020-2021 prices)",
+          "titleAlign": "left",
+          "titleAngle": 0,
+          "titleBaseline": "bottom",
+          "titleColor": "#676A86",
+          "titleFontSize": 12,
+          "titleX": 5,
+          "titleY": 15
+        }
+      },
+      "tooltip": [
+        {"field": "date", "type": "nominal", "title": "Date"},
+        {"field": "value", "type": "quantitative", "title": "£ per year"}
+      ]
+    }
+  }
